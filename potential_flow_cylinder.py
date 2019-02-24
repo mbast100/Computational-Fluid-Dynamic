@@ -1,4 +1,4 @@
-
+3
 
 import numpy as np
 
@@ -13,8 +13,8 @@ Uinf = 1
 pinf=0
 rho=1
 
-nx=200
-ny=200
+nx=300
+ny=300
 
 xmin=-5
 xmax=5
@@ -71,6 +71,7 @@ for j in range(ny):
 		th=theta(X[i],Y[j])
 		r=radius(X[i],Y[j])
 		PHI[i][j]=phi(r,th,L,Uinf)
+plt.title(r"$velocity$ $potential$ $contour$")
 plt.contour(X,Y,np.transpose(PHI),np.linspace(xmin,xmax,20+1),colors='0.5',linestyles=':')
 plt.show()
 
@@ -116,6 +117,7 @@ cp=(P-pinf)/(0.5*rho*Uinf**2) #Pressure coefficient
 
 #Plot pressure coefficient
 plt.figure()
+plt.title(r"$Pressure$ $coefficient$")
 plt.xlabel(r"$x$")
 plt.ylabel(r"$y$")
 plt.axes().set_aspect('equal')
@@ -137,6 +139,7 @@ Surface pressure
 '''
 
 plt.figure()
+plt.title(r"$surface$ $pressure$")
 TH=np.linspace(0,-np.pi,100)
 #ptop=pinf+0.5*rho*Uinf**2 * (1-4*np.sin(TH)**2) 
 #ptop=(ptop-pinf)/(0.5*rho*Uinf**2)
