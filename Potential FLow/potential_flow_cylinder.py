@@ -1,5 +1,9 @@
-3
+"""
+@author: Mark Bastawros
 
+Simple robut calculation of a pressure and velocity around a cylinder
+
+"""
 import numpy as np
 
 def radius(x,y):
@@ -27,6 +31,7 @@ Y = np.linspace(-5,5,num=ny)
 
 
 import matplotlib.pyplot as plt
+
 plt.figure()
 plt.xlabel(r"$x$")
 plt.ylabel(r"$y$")
